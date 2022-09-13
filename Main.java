@@ -1,16 +1,43 @@
 public class Main {
-    /* Написать метод String replace(String str, char oldChar, char newChar) который в переданной строке str меняет все символы  oldChar на символы newChar.  Например: replace(«саша», ‘c’, ‘м’) -> «маша» */
+    public static void countCube(int n, int i, String abc) {
+        //int i = 0;
+        //int num1 = 5;
+        //------------------
 
-    public static void word(char oldChar, char newChar, String Str) {
+        while (i <= n) {
+            System.out.printf((i * i * i) + " ");
+            i += 1;
+        }
+        System.out.println(abc);
+    }
 
-        System.out.print("Old string: " + Str);
-        System.out.println();
-        String newString = Str.replace(oldChar, newChar);
-        System.out.print("New string: " + newString);
+    public static int countSum(int begin, int end){
+        int sum=0;
+        while (begin<=end) {
+            sum+=begin++; //sum=sum+begin; begin=begin+1;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
-        word('с', 'м', new String("саша"));
-        word('а', 'о', new String("саша"));
+
+        //С использованием цикла while написать метод, печатающий куб числа от 0 до данного чисда n.
+        //Пример: на входе n=3  на выходе 0,1,8,27
+
+        countCube(4, 0, "Count finished");
+        System.out.println();
+        System.out.println("-------------------");
+        countCube(7, 1, "Count finished");
+        System.out.println();
+        System.out.println("-------------------");
+        countCube(10, 5, "finished");
+        System.out.println();
+        System.out.println("-------------");
+        int a= countSum(1,5);
+        System.out.println(a);
+        //System.out.println(countSum(1,5));
+
+
     }
+
 }
