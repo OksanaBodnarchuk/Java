@@ -1,19 +1,22 @@
 public class Main {
+
+    //Дан массив целых чисел. Реализовать метод, который возвращает минимальное значение в данном массиве. Например: {1,3,6,-1,4,-5,9} -> -5
     public static void main(String[] args) {
 
-        /*Дан массив int. Реализовать метод, который считает сумму положительных  элементов массива.{3, 2, -1, 5, -3} ->10*/
-
-        int[] arr = {3, 2, -1, 5, -3};
-        sum(arr);
+        int[] array = {1, 3, 6, -1, 4, -5, 9};
+        System.out.println(numberMax(array));
     }
 
-    public static void sum(int[] arr) {
-        int arrSum = 0;
-        for (int i = 0; i < arr.length; i+=1) {
-            if (arr[i] > 0) {
-                arrSum += arr[i];
+    public static int numberMax(int[] number) {
+        int min = number[0];
+
+        for (int i = 0; i < number.length; i += 1) {
+
+            if (number[i] < min) {
+                min = number[i];
             }
         }
-        System.out.println(arrSum);
+        return min;
     }
 }
+
